@@ -23,13 +23,31 @@ class PeopleController < ApplicationController
 
   def read
     # return an individual person
+    @person = Person.find(params[:id])
+
+    render json: @person
+
   end
 
   def update
     # update our person by id
+    @person = Person.find(params[:id])
+
+    @person.update({
+      :name => params[:name],
+      :hobby => params[:hobby]
+    })
+
+    render json: @person
   end
 
   def destroy
     # delete our person by id
+    @person = Person.find(params[:id])
+    @person.destroy
+
+    @message = {:message => 'A person with an id of ' + params[:id] + ' has been destroyed.'}
+
+    render json: @message
   end
 end
