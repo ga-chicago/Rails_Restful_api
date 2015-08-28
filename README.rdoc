@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic RESTful API that displays `people`. It utilizes Ruby on Rails, jQuery, Underscore, and Backbone.js to render the list of all `people`.
 
-Things you may want to cover:
+== Usage
 
-* Ruby version
+To setup your database:
 
-* System dependencies
+* `bin/rake db:create`
+* `bin/rake db:migrate`
+* `rails serve`
 
-* Configuration
+== Points of Notice
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* REST API endpoint: `/api/people`
+* Backbone Collection: `/home`
